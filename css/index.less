@@ -1,0 +1,138 @@
+// 初始化
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+// 初始页
+.index {
+  // 开发 隐藏
+  // display: none;
+  height: 100vh;
+  background: url("http://www.imooc.com/newyear/static/page1_bg.png") center;
+  background-size: cover;
+  // 灯笼
+  .lantern {
+    width: 70px;
+    height: 61px;
+    background: url("http://www.imooc.com/newyear/static/page1_lantern.png");
+    background-size: cover;
+    margin: 0 auto;
+    transform-origin: center top;
+    animation: 2s ease-in-out infinite turn;
+  }
+  .time {
+    width: 200px;
+    height: 62px;
+    background: url("http://www.imooc.com/newyear/static/page1_frame.png");
+    background-size: cover;
+    margin: 20px auto;
+    line-height: 62px;
+    text-align: center;
+    font-weight: bolder;
+    color: #fff;
+  }
+  .text {
+    width: 100px;
+    height: 300px;
+    background: url("http://www.imooc.com/newyear/static/page1_text.png");
+    background-size: cover;
+    margin: 0 auto;
+  }
+  .fence {
+    width: 100vw;
+    height: 160px;
+    background: url("../img/koukou.png") center bottom;
+    background-size: 100%;
+    position: fixed;
+    bottom: 0;
+    .p1 {
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+      z-index: 5;
+      width: 190px;
+      height: 300px;
+      background: url(../img/kouzuo.png) bottom no-repeat;
+      background-size: 100%;
+      transform-origin: center bottom;
+      animation: 2s ease-in-out -1s infinite turn;
+    }
+    .p2 {
+      width: fit-content;
+      height: 30px;
+      padding: 0 10px;
+      line-height: 30px;
+      text-align: center;
+      background-color: rgba(41, 87, 238, 0.8);
+      border-radius: 15px;
+      margin: 0 auto;
+      font-weight: 600;
+      font-size: 10px;
+      color: #fff;
+      margin-top: 50px;
+      border: 5px solid #7cdb2e;
+    }
+    .p3 {
+      position: absolute;
+      right: -10px;
+      bottom: 0;
+      z-index: 5;
+      width: 150px;
+      height: 210px;
+      background: url(../img/kouyou.png) no-repeat;
+      background-size: 100%;
+      transform-origin: center bottom;
+      animation: 2s ease-in-out infinite turn;
+    }
+  }
+  @keyframes turn {
+    0% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(-1deg);
+    }
+  }
+}
+.music {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url("http://www.imooc.com/newyear/static/music_icon.png") center;
+  background-size: cover;
+}
+.music.run {
+  animation: 2s linear infinite run;
+}
+@keyframes run {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+// 第二页
+.fire {
+  // 显示 影藏
+  display: none;
+  height: 100vh;
+  background-color: #c4361d;
+}
